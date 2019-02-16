@@ -6,8 +6,20 @@ namespace PadawansTask4
     {
         public static int GetVowelCount(string str)
         {
-            // put your code here
-            throw new NotImplementedException();
+            int gvc = 0;
+            if (str == null)
+            {
+                throw new NotImplementedException();
+            }
+            char[] chr = str.ToCharArray();
+            foreach (char i in chr)
+            {
+                if (Equals(i, 'a') || Equals(i, 'u') || Equals(i, 'i') || Equals(i, 'o') || Equals(i, 'e'))
+                {
+                    gvc++;
+                }
+            }
+            return gvc;
         }
     }
 }
