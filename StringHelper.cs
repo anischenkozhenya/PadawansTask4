@@ -8,9 +8,9 @@ namespace PadawansTask4
         {
             int gvc = 0;
             if (str == null)
-            {
-                throw new NotImplementedException();
-            }
+                throw new ArgumentNullException();
+            if (str == "")
+                throw new ArgumentException();
             char[] chr = str.ToCharArray();
             foreach (char i in chr)
             {
